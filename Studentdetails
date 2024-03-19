@@ -1,0 +1,32 @@
+// MWAURA CYRUS NGIGI
+//ENE212-0060/2021
+#include <stdio.h>
+
+// Define a structure to hold student information
+struct Student {
+    int regNumber;
+    char name1[50];
+    char name2[50];
+    char units[3][50];
+};
+
+int main() {
+    // Declare a structure variable and initialize data
+    struct Student student = {
+        .regNumber = 123456,
+        .name1 = "John",
+        .name2 = "Doe",
+        .units = {"Math", "Physics", "Computer Science"}
+    };
+    
+    // Pointer to the structure
+    struct Student *ptr = &student;
+
+    // Output entered information
+    printf("Entered information:\n");
+    printf("Registration Number: %d\n", ptr->regNumber);
+    printf("Name: %s %s\n", ptr->name1, ptr->name2);
+    printf("Units: %s, %s, %s\n", ptr->units[0], ptr->units[1], ptr->units[2]);
+
+    return 0;
+}
